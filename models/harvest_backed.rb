@@ -5,8 +5,10 @@ class HarvestBacked
     include HTTParty
     format :json
     base_uri CONF[:domain]
-    default_params :output => 'json'
     basic_auth CONF[:username], CONF[:password]
+    headers 'Accept' => 'application/json'
+    headers 'Content-Type' => 'application/json'
+    headers 'User-Agent' => 'harvest-viz: http://github.com/headshift/harvest-viz via HttParty and ruby.'
   end
   
   class << self
