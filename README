@@ -1,0 +1,14 @@
+HARVEST-VIZ
+===========
+
+A little ruby webapp that uses Sinatra, HTTParty and Raphael.js to generate visualisations of project data at from the harvestapp.com web service.
+
+harvest-viz depends on the httparty and sinatra gems.
+
+In addition, you must add your harvest account details to config/harvest.yaml, which is gitignored by default:
+
+---
+  :domain: the_domain_of_your_harvest_service
+  :username: your_harvest_username_or_email
+  :password: your_harvest_password
+
